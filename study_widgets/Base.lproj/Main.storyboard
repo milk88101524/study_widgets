@@ -1,24 +1,786 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aHW-T3-kzJ">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="study_widgets" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Widget Demo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4jj-ZX-Fne">
+                                <rect key="frame" x="98" y="141" width="197" height="36"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rlm-k9-npn">
+                                <rect key="frame" x="16" y="185" width="361" height="633"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" id="RBh-uf-eR0">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="800"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HH3-fp-j47">
+                                                <rect key="frame" x="80" y="20" width="201" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="UGD-5y-Ekz"/>
+                                                </constraints>
+                                                <buttonConfiguration key="configuration" style="filled" title="Segmented Control"/>
+                                                <connections>
+                                                    <segue destination="grI-Ym-IZJ" kind="show" id="MdK-Mt-GVD"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ce-0Z-Ffo">
+                                                <rect key="frame" x="138" y="100" width="85" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="n8O-lJ-QGR"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Slider"/>
+                                                <connections>
+                                                    <segue destination="NX9-EM-0tO" kind="show" id="RZL-jG-1mW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pqi-4T-Nci">
+                                                <rect key="frame" x="134" y="180" width="93" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="Ylp-nq-gVf"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Switch"/>
+                                                <connections>
+                                                    <segue destination="fSu-at-XTX" kind="show" id="qOc-SH-VoO"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t02-sp-8hM">
+                                                <rect key="frame" x="76" y="260" width="209" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="BDN-r3-Ib4"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Activity Indicator View"/>
+                                                <connections>
+                                                    <segue destination="Cin-Rj-tfZ" kind="show" id="6Dp-m6-LWr"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NOU-6d-ngt">
+                                                <rect key="frame" x="92" y="340" width="177" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="S0H-MM-CzB"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Progress View"/>
+                                                <connections>
+                                                    <segue destination="Ph1-Fb-e5L" kind="show" id="bqh-CY-clZ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xRi-vS-RtT">
+                                                <rect key="frame" x="111" y="420" width="139" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="rVo-fX-ePC"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Page Control"/>
+                                                <connections>
+                                                    <segue destination="yP5-jR-a3E" kind="show" id="9ou-yS-ZNe"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IQd-in-12h">
+                                                <rect key="frame" x="116" y="500" width="129" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="1tu-gO-84z"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Date Picker"/>
+                                                <connections>
+                                                    <segue destination="ceq-t9-MU3" kind="show" id="BYU-5G-eMf"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TjW-M7-oJN">
+                                                <rect key="frame" x="57" y="580" width="247" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="Bne-Nf-b4h"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Visual Effect View with Blur"/>
+                                                <connections>
+                                                    <segue destination="Gii-Be-5ks" kind="show" id="Lcc-Ag-g5x"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4x-2O-hj7">
+                                                <rect key="frame" x="121" y="660" width="119" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="RAn-Ki-gyU"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Color Well"/>
+                                                <connections>
+                                                    <segue destination="g4R-Zk-Cf5" kind="show" id="a5a-u4-xc7"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <viewLayoutGuide key="safeArea" id="Cxt-ZF-X57"/>
+                                        <constraints>
+                                            <constraint firstItem="Cxt-ZF-X57" firstAttribute="trailing" secondItem="IQd-in-12h" secondAttribute="trailing" constant="116" id="0qQ-4T-3vE"/>
+                                            <constraint firstItem="Pqi-4T-Nci" firstAttribute="top" secondItem="6ce-0Z-Ffo" secondAttribute="bottom" constant="30" id="11D-oo-PQu"/>
+                                            <constraint firstItem="Cxt-ZF-X57" firstAttribute="trailing" secondItem="NOU-6d-ngt" secondAttribute="trailing" constant="92" id="2y0-1U-DMO"/>
+                                            <constraint firstItem="Cxt-ZF-X57" firstAttribute="trailing" secondItem="HH3-fp-j47" secondAttribute="trailing" constant="80" id="4hs-PH-JFf"/>
+                                            <constraint firstItem="TjW-M7-oJN" firstAttribute="leading" secondItem="Cxt-ZF-X57" secondAttribute="leading" constant="57" id="6zD-UI-Dqj"/>
+                                            <constraint firstItem="xRi-vS-RtT" firstAttribute="leading" secondItem="Cxt-ZF-X57" secondAttribute="leading" constant="111" id="Apm-hS-EaN"/>
+                                            <constraint firstItem="a4x-2O-hj7" firstAttribute="top" secondItem="TjW-M7-oJN" secondAttribute="bottom" constant="30" id="BiP-PU-kbg"/>
+                                            <constraint firstItem="IQd-in-12h" firstAttribute="top" secondItem="xRi-vS-RtT" secondAttribute="bottom" constant="30" id="CEc-hl-BTU"/>
+                                            <constraint firstItem="Cxt-ZF-X57" firstAttribute="trailing" secondItem="t02-sp-8hM" secondAttribute="trailing" constant="76" id="CNb-dy-6bR"/>
+                                            <constraint firstItem="HH3-fp-j47" firstAttribute="leading" secondItem="Cxt-ZF-X57" secondAttribute="leading" constant="80" id="DV7-lt-yCB"/>
+                                            <constraint firstItem="Cxt-ZF-X57" firstAttribute="trailing" secondItem="HH3-fp-j47" secondAttribute="trailing" constant="80" id="FSL-s7-LTy"/>
+                                            <constraint firstItem="Pqi-4T-Nci" firstAttribute="leading" secondItem="Cxt-ZF-X57" secondAttribute="leading" constant="134" id="S1o-eD-MzL"/>
+                                            <constraint firstItem="NOU-6d-ngt" firstAttribute="top" secondItem="t02-sp-8hM" secondAttribute="bottom" constant="30" id="XF5-Oe-1la"/>
+                                            <constraint firstItem="Cxt-ZF-X57" firstAttribute="trailing" secondItem="Pqi-4T-Nci" secondAttribute="trailing" constant="134" id="XbK-8b-hZv"/>
+                                            <constraint firstItem="6ce-0Z-Ffo" firstAttribute="leading" secondItem="Cxt-ZF-X57" secondAttribute="leading" constant="138" id="Y1F-Cj-fBh"/>
+                                            <constraint firstItem="Cxt-ZF-X57" firstAttribute="trailing" secondItem="6ce-0Z-Ffo" secondAttribute="trailing" constant="138" id="YDK-Tt-Upg"/>
+                                            <constraint firstItem="Cxt-ZF-X57" firstAttribute="trailing" secondItem="a4x-2O-hj7" secondAttribute="trailing" constant="121" id="Z1M-RM-Wf2"/>
+                                            <constraint firstItem="a4x-2O-hj7" firstAttribute="leading" secondItem="Cxt-ZF-X57" secondAttribute="leading" constant="121" id="g8D-6l-HF4"/>
+                                            <constraint firstItem="6ce-0Z-Ffo" firstAttribute="top" secondItem="HH3-fp-j47" secondAttribute="bottom" constant="30" id="hRA-3W-rx9"/>
+                                            <constraint firstItem="IQd-in-12h" firstAttribute="leading" secondItem="Cxt-ZF-X57" secondAttribute="leading" constant="116" id="n6Z-3H-KAR"/>
+                                            <constraint firstItem="Cxt-ZF-X57" firstAttribute="trailing" secondItem="xRi-vS-RtT" secondAttribute="trailing" constant="111" id="nNx-Ha-biu"/>
+                                            <constraint firstItem="HH3-fp-j47" firstAttribute="top" secondItem="Cxt-ZF-X57" secondAttribute="top" constant="20" id="ncB-e7-zgu"/>
+                                            <constraint firstItem="xRi-vS-RtT" firstAttribute="top" secondItem="NOU-6d-ngt" secondAttribute="bottom" constant="30" id="op9-VR-Oc6"/>
+                                            <constraint firstItem="Cxt-ZF-X57" firstAttribute="trailing" secondItem="TjW-M7-oJN" secondAttribute="trailing" constant="57" id="pyH-1z-dag"/>
+                                            <constraint firstItem="HH3-fp-j47" firstAttribute="leading" secondItem="Cxt-ZF-X57" secondAttribute="leading" constant="80" id="tic-Kj-w44"/>
+                                            <constraint firstItem="TjW-M7-oJN" firstAttribute="top" secondItem="IQd-in-12h" secondAttribute="bottom" constant="30" id="ux8-ct-oet"/>
+                                            <constraint firstItem="NOU-6d-ngt" firstAttribute="leading" secondItem="Cxt-ZF-X57" secondAttribute="leading" constant="92" id="xHP-Eh-2zB"/>
+                                            <constraint firstItem="t02-sp-8hM" firstAttribute="leading" secondItem="Cxt-ZF-X57" secondAttribute="leading" constant="76" id="yIu-lz-rHL"/>
+                                            <constraint firstItem="t02-sp-8hM" firstAttribute="top" secondItem="Pqi-4T-Nci" secondAttribute="bottom" constant="30" id="zKm-aZ-Icd"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="g4e-hH-2x9"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="w0I-mL-eMa"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="contentSize">
+                                        <size key="value" width="0.0" height="800"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.6705882352941176" green="0.67000001668930054" blue="0.67000001668930054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4jj-ZX-Fne" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="98" id="AeX-9D-Tip"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4jj-ZX-Fne" secondAttribute="trailing" constant="98" id="RWM-om-zKL"/>
+                            <constraint firstItem="4jj-ZX-Fne" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="38" id="h2k-3t-HQI"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="gkj-8Y-hwV"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="989" y="4"/>
+        </scene>
+        <!--Switch-->
+        <scene sceneID="JTm-31-UZd">
+            <objects>
+                <viewController id="fSu-at-XTX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Te-Df-FZv">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8eW-av-DDC">
+                                <rect key="frame" x="173" y="113" width="49" height="31"/>
+                            </switch>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pic_switch" translatesAutoresizingMaskIntoConstraints="NO" id="SoQ-cf-imv">
+                                <rect key="frame" x="16" y="171" width="361" height="216"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bh9-KJ-c9O">
+                                <rect key="frame" x="16" y="402" width="361" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Switch
+1. State : 設定 Switch 預設的狀態
+2. On Tint : 設定當 Switch 為開啟時的外觀顏色
+3. Thumb Tint : 設定 Switch 中間那顆球球的顏色
+</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2Pk-7y-m2C"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8eW-av-DDC" firstAttribute="top" secondItem="2Pk-7y-m2C" secondAttribute="top" constant="10" id="4Ip-Um-tvY"/>
+                            <constraint firstItem="2Pk-7y-m2C" firstAttribute="trailing" secondItem="8eW-av-DDC" secondAttribute="trailing" constant="173" id="sL2-IS-6qX"/>
+                            <constraint firstItem="8eW-av-DDC" firstAttribute="leading" secondItem="2Pk-7y-m2C" secondAttribute="leading" constant="173" id="usN-pE-tJ1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Switch" id="92l-U6-Ba0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z5M-Xq-SIR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1844" y="718"/>
+        </scene>
+        <!--Page Control-->
+        <scene sceneID="U29-ka-g9x">
+            <objects>
+                <viewController id="yP5-jR-a3E" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="w3B-zd-eWe">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="oC0-N7-iEI">
+                                <rect key="frame" x="16" y="120" width="361" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </pageControl>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pic_page_control" translatesAutoresizingMaskIntoConstraints="NO" id="b55-2h-mHI">
+                                <rect key="frame" x="16" y="180" width="361" height="229"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vOl-gP-oLF">
+                                <rect key="frame" x="16" y="436" width="361" height="170"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Page Control
+1. # of Pages : 設定 Page Control 頁面的總數
+2. Current : 設定 Page Control 目前的頁面
+3. Hides for Single Page : 當 # of Pages 為 1 時隱藏 Page Control
+4. Tint Color : 設定 Page Control 未選擇頁面圓點的顏色
+5. Current Page : 設定 Page Control 被選中頁面圓點的顏色</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="66d-as-44Z"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Page Control" id="2BD-QU-cZj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aAx-9L-FIy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2696.9465648854962" y="716.90140845070425"/>
+        </scene>
+        <!--Color Well-->
+        <scene sceneID="u8U-Fh-O4F">
+            <objects>
+                <viewController id="g4R-Zk-Cf5" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S8L-3f-s7F">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <colorWell contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FGp-vu-VVa">
+                                <rect key="frame" x="182" y="123" width="28" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </colorWell>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pic_color_well" translatesAutoresizingMaskIntoConstraints="NO" id="cyw-r5-km0">
+                                <rect key="frame" x="16" y="167" width="361" height="186"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="I98-6Z-QKl">
+                                <rect key="frame" x="16" y="361" width="361" height="414"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Color Well
+1. Color : 設定 Color Well 圓圈中心的顏色
+2. Supports Alpha : 設定 Color Well Sheet 是否顯示調整透明度的 Slider
+3. Title : 設定 Color Well Sheet 的標題</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HaY-Mt-2jO"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Color Well" id="3en-pS-Inz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VYH-HS-92W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3559.5419847328244" y="719.71830985915494"/>
+        </scene>
+        <!--Slider-->
+        <scene sceneID="G6Q-1Q-PZr">
+            <objects>
+                <viewController id="NX9-EM-0tO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oBY-om-sQj">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eFT-Lm-cpM">
+                                <rect key="frame" x="16" y="103" width="361" height="715"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" id="ies-9E-5uZ">
+                                        <rect key="frame" x="0.0" y="3" width="361" height="709"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="0.0" maxValue="10" minimumValueImage="light.min" catalog="system" maximumValueImage="light.max" translatesAutoresizingMaskIntoConstraints="NO" id="KtO-vd-2nN">
+                                                <rect key="frame" x="14" y="22" width="333" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="minimumTrackTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="maximumTrackTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="thumbTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </slider>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pic_slider" translatesAutoresizingMaskIntoConstraints="NO" id="uin-tI-0xf">
+                                                <rect key="frame" x="16" y="59" width="329" height="308"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NvH-dn-oZE">
+                                                <rect key="frame" x="16" y="375" width="329" height="306"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <string key="text">Slider
+1. Value : 設定 Slider 目前的數值
+2. Minimum : 設定 Slider 最小值，是一個 Float 的值
+   https://developer.apple.com/documentation/uikit/uislider/1621345-minimumvalue
+3. Maximum : 設定 Slider 最大值，是一個 Float 的值
+   https://developer.apple.com/documentation/uikit/uislider/1621341-maximumvalue
+4. Min Image : 設定 Slider 最左方的 image
+5. Max Image : 設定 Slider 最右方的 image
+6. Min Track : 設定 Slider 的可拖動球球到最左方這段距離的顏色
+7. Max Track : 設定 Slider 的可拖動球球到最右方這段距離的顏色
+8. Thumb Tint : 設定 Slider 可拖動球球的顏色
+</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <viewLayoutGuide key="safeArea" id="Wtr-v5-yw4"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="ZDw-5j-4Xy"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="7fc-2p-9Df"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="contentSize">
+                                        <size key="value" width="0.0" height="800"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rbi-PB-POw"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Slider" id="Xx0-zq-Udg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZMU-eG-IEZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1845" y="4"/>
+        </scene>
+        <!--Segmented Control-->
+        <scene sceneID="hsw-FZ-9aA">
+            <objects>
+                <viewController id="grI-Ym-IZJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="svr-O3-ljl">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gJM-S8-Lvh">
+                                <rect key="frame" x="16" y="103" width="361" height="715"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" id="vcD-gm-ck9">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="785"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="aFK-TO-YXS">
+                                                <rect key="frame" x="16" y="20" width="329" height="32"/>
+                                                <segments>
+                                                    <segment title="First"/>
+                                                    <segment title="Second"/>
+                                                    <segment title="" image="square.and.arrow.up" catalog="system"/>
+                                                </segments>
+                                            </segmentedControl>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pic_segmented_control" translatesAutoresizingMaskIntoConstraints="NO" id="0eb-VR-Stc">
+                                                <rect key="frame" x="16" y="69" width="329" height="366"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lNe-aj-9kM">
+                                                <rect key="frame" x="16" y="443" width="329" height="306"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <string key="text">Segmented Control
+1. Segments : 設定 Segmented Control 顯示的數量
+2. Segment : 設定 Segmented Control 物件的屬性
+3. Title : 設定 Segmented Control 物件的標題
+4. Image : 設定 Segmented Control 物件的圖片
+5. Selected : 設定預設選擇的 Segmented Control 物件
+
+* Segmented Control 物件的 `title` 跟 `image` 不能同時存在
+ 
+* 都提到 `Selected` 就提一下同樣在 `Behavior` 列的 `Enable`，`Enable` 是設定 Segmented Control 物件是否能被選用，若勾選這個的話該 Segmented Control 物件字體顏色會變黑，執行後不能被選用</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <viewLayoutGuide key="safeArea" id="zCB-sz-8s9"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="aFK-TO-YXS" firstAttribute="leading" secondItem="vcD-gm-ck9" secondAttribute="leading" constant="16" id="Gxw-6l-dKw"/>
+                                            <constraint firstAttribute="trailing" secondItem="aFK-TO-YXS" secondAttribute="trailing" constant="16" id="Zgx-zG-HCa"/>
+                                            <constraint firstItem="aFK-TO-YXS" firstAttribute="top" secondItem="vcD-gm-ck9" secondAttribute="top" constant="20" symbolic="YES" id="a84-rg-1uB"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="C7x-gq-Eos"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="c4h-8G-DD7"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="contentSize">
+                                        <size key="value" width="0.0" height="800"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="raq-Ur-c0j"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Segmented Control" id="NFS-bq-0JU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3gK-H3-qif" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1844" y="-697"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Sg8-LW-7Ek">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aHW-T3-kzJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="n2r-6m-B3c">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Wa4-cM-toi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DwY-tl-Rkc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="107.63358778625954" y="3.5211267605633805"/>
+        </scene>
+        <!--Activity Indicator View-->
+        <scene sceneID="uS5-PH-nFb">
+            <objects>
+                <viewController id="Cin-Rj-tfZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a98-lM-3oB">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="H0h-By-PXa">
+                                <rect key="frame" x="171" y="103" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pic_activity_indicator_view" translatesAutoresizingMaskIntoConstraints="NO" id="fy0-Y3-5D5">
+                                <rect key="frame" x="16" y="161" width="361" height="221"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GcO-tH-Wrl">
+                                <rect key="frame" x="16" y="390" width="361" height="243"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Activity Indicator View
+1. Style : 設定 Activity Indicator View 的大小
+   可選的有 : Medium、Large 以及已棄用的 Large White、White、Gray
+2. Color : 設定 Activity Indicator View 的顏色
+3. Animating : 設定 Activity Indicator View 是否有動畫，當勾選時 Activity Indicator View 會轉圈圈，不勾選的話就不會動
+
+* 這邊補充一下同在 `Behavior` 的 `Hides When Stopped`，當勾選這個功能時他呈現的效果就跟字面上的意思一樣就是停止時隱藏</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Lgg-A7-1R6"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Activity Indicator View" id="gnP-xv-w40"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iAk-AM-Gwb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2697" y="-697"/>
+        </scene>
+        <!--Date Picker-->
+        <scene sceneID="Huk-UI-4jq">
+            <objects>
+                <viewController id="ceq-t9-MU3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bYJ-Ay-wzQ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NhX-RN-ZCw">
+                                <rect key="frame" x="16" y="103" width="361" height="715"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" id="jxr-fD-Zm3">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="1090"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="2jW-4s-whn">
+                                                <rect key="frame" x="55" y="16" width="251" height="36"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                            </datePicker>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pic_date_picker" translatesAutoresizingMaskIntoConstraints="NO" id="h91-4Q-qmz">
+                                                <rect key="frame" x="0.0" y="70" width="361" height="327"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zA3-0Q-Txv">
+                                                <rect key="frame" x="0.0" y="413" width="361" height="620"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <string key="text">Date Picker
+1. Preferred Style : 設定 Date Picker 的顯示風格，有 `automatic`、`wheels`、`compact`、`inline`
+2. Mode : 設定 Date Picker 的模式，有 `Time`、`Date`、`Date and Time`、`Count Down Timer`
+3. Locale : 設定 Date Picker 的時區
+4. Interval : 設定 Date Picker 每個選項的最小時間間隔
+5. Date : 設定 Date Picker 顯示的日期
+6. Minimum Date : 設定 Date Picker 可設定的最小時間
+7. Maximum Date : 設定 Date Picker 可設定的最大時間
+
+* 這邊補充一下關於 Date Picker 的 Preferred Style 各風格的解釋
+1. `automatic`
+ - 效果: 系統自動選擇最合適的風格，根據當前的上下文和設備決定
+ - 應用: 當你不確定哪種風格最合適時，可以使用這個選項，讓系統根據情境自動選擇
+2. `wheels`
+ - 效果: 傳統的滾輪風格，日期選擇器以滾輪形式顯示，允許用戶上下滾動選擇日期或時間
+ - 應用: 適合在需要顯示完整日期和時間選擇器的情況下使用，尤其是那些需要大量滾動操作的場合
+3. `.compact`
+ - 效果: 精簡的日期選擇器風格，類似於一個文本框，點擊後彈出完整的日期選擇器
+ - 應用: 適合空間有限的情況，例如工具列或表格視圖中的日期選擇。節省空間，僅在用戶需要時才顯示完整選擇器
+4. `.inline`
+ - 效果: 內嵌式的日期選擇器，直接在界面中顯示日曆和日期選擇器
+ - 應用: 適合需要在界面上直接展示日曆的場合，例如選擇特定日期範圍的應用。這種風格更適合在有足夠空間的情況下使用
+</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <viewLayoutGuide key="safeArea" id="7s8-kt-7HV"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="1oe-t5-IJ6"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Txx-Py-Mur"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="contentSize">
+                                        <size key="value" width="0.0" height="1090"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="06M-Fa-wtD"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Date Picker" id="fcy-iV-PgN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j3C-Ih-qtV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3583.969465648855" y="-697.18309859154931"/>
+        </scene>
+        <!--Progress View-->
+        <scene sceneID="k9F-ba-8qS">
+            <objects>
+                <viewController id="Ph1-Fb-e5L" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pI4-gw-g98">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3QB-QR-7g9">
+                                <rect key="frame" x="16" y="121" width="361" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="progressTintColor" systemColor="systemMintColor"/>
+                                <color key="trackTintColor" systemColor="opaqueSeparatorColor"/>
+                            </progressView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="W13-F3-few">
+                                <rect key="frame" x="16" y="458" width="361" height="206"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Progress View
+1. Style : 設定 Progress View 的樣式
+2. Progress : 設定 Progress View 當前進度，這個數值能夠填入 0.0 ～ 1.0
+3. Progress Tint : 設定 Progress View 已完成進度條的顏色
+4. Track Tint : 設定 Progress View 未完成進度條的顏色
+5. Progress Image : 設定 Progress View 已完成進度條用 Progress Image 設定的圖片填滿
+6. Track Image : 設定 Progress View 未完成進度條用 Track Image 設定的圖片填滿
+</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pic_progress_view" translatesAutoresizingMaskIntoConstraints="NO" id="fPW-Cl-cdI">
+                                <rect key="frame" x="16" y="164" width="361" height="263"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dTa-mC-COn"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Progress View" id="obF-24-ULB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kEw-Zg-3cM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2696.9465648854962" y="3.5211267605633805"/>
+        </scene>
+        <!--Visual Effect View with Blur-->
+        <scene sceneID="OfO-9P-ANK">
+            <objects>
+                <viewController id="Gii-Be-5ks" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="A2g-Wf-0Op">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tsm-b6-s4A">
+                                <rect key="frame" x="16" y="103" width="361" height="715"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" id="2Pf-lY-fce">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="2100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wun-Pq-Rmd">
+                                                <rect key="frame" x="60" y="25" width="241" height="128"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="7mY-DY-8DN">
+                                                    <rect key="frame" x="0.0" y="0.0" width="241" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                </view>
+                                                <blurEffect style="regular"/>
+                                            </visualEffectView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pic_visual_effect_view_with_blur" translatesAutoresizingMaskIntoConstraints="NO" id="D7d-kb-R1d">
+                                                <rect key="frame" x="16" y="161" width="329" height="138"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zft-JL-woz">
+                                                <rect key="frame" x="16" y="318" width="329" height="1752"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <string key="text">這個即使看了官方的文件後還是不懂這個是什麼，所以把解釋這個元件的工作交給我最好的工作夥伴 ChatGPT 
+
+在 Xcode 中，Visual Effect View 是一個用來實現模糊和其他視覺效果的視圖元件。它可以用來增加模糊效果，從而使背景變得模糊，而前景內容保持清晰。這通常用來製作具有深度感和分層效果的 UI
+
+當你在 Xcode 中使用 Visual Effect View 並選擇 Blur 效果時，實際上你是在應用一種視覺模糊效果。這種效果通常用於增強背景與前景之間的對比，增加層次感和深度
+
+Blur Style
+
+Blur Style 指的是模糊效果的風格。這些風格可以影響模糊的程度和外觀。以下是常見的 Blur Style 及其用途：
+
+1. Extra Light (超亮)
+    - 效果: 提供一種非常明亮和輕盈的模糊效果
+    - 應用: 適合用於白色或淺色背景，使背景模糊但仍保持明亮感
+2. Light (亮)
+    - 效果: 提供一種亮色調的模糊效果，比 Extra Light 略微暗一些
+    - 應用: 適合用於中等亮度的背景，可以使內容更加柔和和清晰
+3. Dark (暗)
+    - 效果: 提供一種暗色調的模糊效果
+    - 應用: 適合用於深色背景，可以讓前景內容更加突出
+4. Regular (常規)
+    - 效果: 提供一種介於亮和暗之間的模糊效果
+    - 應用: 適合用於中性色調的背景，提供平衡的模糊效果
+5. Prominent (顯著)
+    - 效果: 提供一種顯著的模糊效果，具有更高的對比度
+    - 應用: 適合用於需要強調前景內容的場景
+6. System Material Styles (系統材質風格)
+    - 效果: 基於系統樣式，提供與 iOS 系統一致的模糊效果
+    - 應用: 適合用於需要與系統風格一致的應用界面。突出前景內容，而背景內容不那麼重要時
+
+* 這邊再透過 ChatGPT 來解釋一下其他 System Material Styles 的效果
+ - Light、Dark 和標準樣式
+這些材質風格根據背景的亮度來設計，適應不同的光線條件。Light 材質風格適合淺色背景，Dark 材質風格適合深色背景，而標準樣式則適合自適應不同背景
+
+* Ultra Thin Material (超薄材質)
+ - 效果: 提供最透明和最少模糊的材質效果
+ - 應用: 適合用於需要最小視覺干擾的界面元素，保持背景內容的可見性
+
+* Thin Material (薄材質)
+ - 效果: 提供較薄的模糊效果，比 Ultra Thin 略微多一點的模糊
+ - 應用: 適合用於需要稍微模糊背景但不影響其可見性的界面元素
+
+* Material (材質)
+ - 效果: 提供中等程度的模糊效果，均衡了背景和前景的可見性
+ - 應用: 適合用於大多數需要模糊背景以強調前景內容的界面
+
+* Thick Material (厚材質)
+ - 效果: 提供較厚的模糊效果，比 Material 更加模糊
+ - 應用: 適合用於需要顯著模糊背景並強調前景內容的界面元素
+
+* Chrome Material (鍍鉻材質) 
+ - 效果: 提供最厚的模糊效果，幾乎完全模糊背景
+ - 應用: 適合用於需要完全模糊背景並使前景內容非常突出的界面元素
+ 
+* Light、Dark 和標準樣式的區別
+ - Ultra Thin Material (Light): 適用於淺色背景的超薄模糊效果
+ - Thin Material (Light): 適用於淺色背景的薄模糊效果    
+ - Material (Light): 適用於淺色背景的中等模糊效果
+ - Thick Material (Light): 適用於淺色背景的厚模糊效果
+ - Chrome Material (Light): 適用於淺色背景的鍍鉻模糊效果
+ - Ultra Thin Material (Dark): 適用於深色背景的超薄模糊效果
+ - Thin Material (Dark): 適用於深色背景的薄模糊效果
+ - Material (Dark): 適用於深色背景的中等模糊效果
+ - Thick Material (Dark): 適用於深色背景的厚模糊效果
+ - Chrome Material (Dark): 適用於深色背景的鍍鉻模糊效果</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <viewLayoutGuide key="safeArea" id="qdB-1N-wfV"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="4fB-7x-9m8"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="orO-wi-7kr"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="contentSize">
+                                        <size key="value" width="0.0" height="2100"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PSP-iG-elj"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Visual Effect View with Blur" id="0ze-Eg-gk1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fpM-nQ-EnA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3584" y="4"/>
         </scene>
     </scenes>
+    <color key="tintColor" white="0.14636479588503401" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+    <resources>
+        <image name="light.max" catalog="system" width="128" height="72"/>
+        <image name="light.min" catalog="system" width="128" height="75"/>
+        <image name="pic_activity_indicator_view" width="566" height="298"/>
+        <image name="pic_color_well" width="566" height="268"/>
+        <image name="pic_date_picker" width="566" height="550"/>
+        <image name="pic_page_control" width="568" height="376"/>
+        <image name="pic_progress_view" width="564" height="432"/>
+        <image name="pic_segmented_control" width="570" height="736"/>
+        <image name="pic_slider" width="570" height="510"/>
+        <image name="pic_switch" width="564" height="354"/>
+        <image name="pic_visual_effect_view_with_blur" width="568" height="216"/>
+        <image name="square.and.arrow.up" catalog="system" width="108" height="128"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
